@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.eternal.framework</groupId>
+    <artifactId>eternal-framework</artifactId>
+    <name>${project.artifactId}</name>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <description>Eternal framework</description>
+
+    <url>https://github.com/EternalFramework/eternal-framework</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>EternalFramework</name>
+        <url>https://github.com/EternalFramework</url>
+    </organization>
+
+    <scm>
+        <url>https://github.com/EternalFramework/eternal-framework</url>
+        <connection>scm:git:git@github.com:EternalFramework/eternal-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:EternalFramework/eternal-framework.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>eterny</id>
+            <name>永恒</name>
+            <email>eternycyh@gmail.com</email>
+            <organization>EternalFramework</organization>
+            <organizationUrl>https://github.com/EternalFramework</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>25</java.version>
+        <revision>0.0.1-SNAPSHOT</revision>
+        <project.encoding>UTF-8</project.encoding>
+    </properties>
+
+    <modules>
+        <module>dependencies</module>
+        <module>foundation</module>
+        <module>parent</module>
+        <module>starters</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- 在 Deploy 阶段，让 Maven 忽略当前目录 pom -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.4</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
